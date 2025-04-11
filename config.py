@@ -36,7 +36,7 @@ class Config(object):
     # digital_botz client config
     API_ID = os.environ.get("API_ID", "24817837")
     API_HASH = os.environ.get("API_HASH", "acd9f0cc6beb08ce59383cf250052686")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7561380664:AAFCKW5FbH451Ke82hxGMbYn-tCTjljWmIM") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7561380664:AAH7ko8zYBvdX26JPp0VroAyZFKH2EObLgQ") 
 
     # premium account string session required 😢 
     STRING_SESSION = os.environ.get("STRING_SESSION", "")
@@ -48,7 +48,7 @@ class Config(object):
     # other configs
     RKN_PIC = os.environ.get("RKN_PIC", "https://telegra.ph/file/b746aadfe59959eb76f59.jpg")
     ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '7428552084').split()]
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002123429361"))
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002376378205"))
 
     # free upload limit 
     FREE_UPLOAD_LIMIT = 6442450944 # calculation 6*1024*1024*1024=results
@@ -71,127 +71,124 @@ class rkn(object):
     # part of text configuration
     START_TXT = """<b>Ｈ𝙰𝙸, {}👋
 
-𝚃ʜɪs 𝙸s 𝙰ɴ 𝙰ᴅᴠᴀᴄᴇᴅ 𝙰ɴᴅ 𝚈ᴇᴛ 𝙿ᴏᴡᴇʀғᴜʟ 𝚁ᴇɴᴀᴍᴇ 𝙱ᴏᴛ
-𝚄sɪɴɢ 𝚃ʜɪs 𝙱ᴏᴛ 𝚈ᴏᴜ 𝙲ᴀɴ 𝚁ᴇɴᴀᴍᴇ & 𝙲ʜᴀɴɢᴇ 𝚃ʜᴜᴍʙɴᴀɪʟ 𝙾ғ 𝚈ᴏᴜʀ 𝙵ɪʟᴇ 
-𝚈ᴏᴜ 𝙲ᴀɴ 𝙰ʟsᴏ 𝙲ᴏɴᴠᴇʀᴛ 𝚅ɪᴅᴇᴏ 𝚃ᴏ 𝙵ɪʟᴇ & 𝙵ɪʟᴇ 𝚃ᴏ 𝚅ɪᴅᴇᴏ
-𝚃𝙷𝙸𝚂 𝙱𝙾𝚃 𝙰𝙻𝚂𝙾 𝚂𝚄𝙿𝙿𝙾𝚁𝚃𝚂 𝙲𝚄𝚂𝚃𝙾𝙼 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻 𝙰𝙽𝙳 𝙲𝚄𝚂𝚃𝙾𝙼 𝙲𝙰𝙿𝚃𝙸𝙾𝙽
+Ceci est un bot de renommage avancé et puissant. En utilisant ce bot, vous pouvez renommer et changer la miniature de votre fichier. Vous pouvez également convertir des vidéos en fichiers et des fichiers en vidéos. CE BOT SUPPORTE ÉGALEMENT DES MINIATURES ET CAPTIONS PERSONNALISÉES.
 
-Tʜɪs Bᴏᴛ Wᴀs Cʀᴇᴀᴛᴇᴅ Bʏ : @Digital_Botz 💞</b>"""
+Ce bot a été créé par :  @BotZFlix 💞</b>"""
 
     ABOUT_TXT = """<b>╭───────────⍟
 ├🤖 ᴍy ɴᴀᴍᴇ : {}
-├🖥️ Dᴇᴠᴇʟᴏᴩᴇʀꜱ : {}
+├🖥️ Dᴇᴠᴇʟᴏᴩᴇʀꜱ : <a href='t.me/Kingcey'>◡̈⃝ㅤ🇰ιηg¢єу</a>
 ├👨‍💻 Pʀᴏɢʀᴀᴍᴇʀ : {}
 ├📕 Lɪʙʀᴀʀy : {}
 ├✏️ Lᴀɴɢᴜᴀɢᴇ: {}
 ├💾 Dᴀᴛᴀ Bᴀꜱᴇ: {}
-├📊 ᴠᴇʀsɪᴏɴ: <a href=https://github.com/DigitalBotz/Digital-Rename-Bot>{}</a></b>     
+├📊 ᴠᴇʀsɪᴏɴ: 2V2.0</b>     
 ╰───────────────⍟ """
 
     HELP_TXT = """
-<b>•></b> /start Tʜᴇ Bᴏᴛ.
+<b>•></b> /start Démarrer le bot.
 
-✏️ <b><u>Hᴏᴡ Tᴏ Rᴇɴᴀᴍᴇ A Fɪʟᴇ</u></b>
-<b>•></b> Sᴇɴᴅ Aɴy Fɪʟᴇ Aɴᴅ Tyᴩᴇ Nᴇᴡ Fɪʟᴇ Nɴᴀᴍᴇ \nAɴᴅ Aᴇʟᴇᴄᴛ Tʜᴇ Fᴏʀᴍᴀᴛ [ document, video, audio ].           
-ℹ️ 𝗔𝗻𝘆 𝗢𝘁𝗵𝗲𝗿 𝗛𝗲𝗹𝗽 𝗖𝗼𝗻𝘁𝗮𝗰𝘁 :- <a href=https://t.me/DigitalBotz_Support>𝑺𝑼𝑷𝑷𝑶𝑹𝑻 𝑮𝑹𝑶𝑼𝑷</a>
+✏️ <b><u>COMMENT RENOMMER UN FICHIER ?</u></b>
+<b>•></b> Envoyer une vidéo ou document et entrer le nouveau nom\nEt puis sélectionner le format [ document, video, audio ].           
+Si tu as un problème, Contactez moi :- <a href=https://t.me/Kingcey>◡̈⃝ㅤ🇰ιηg¢єу</a>
 """
 
     UPGRADE_PREMIUM= """
-•⪼ ★𝘗𝘭𝘢𝘯𝘴    -  ⏳𝘋𝘢𝘵𝘦 - 💸𝘗𝘳𝘪𝘤𝘦 
-•⪼ 🥉𝘉𝘳𝘰𝘯𝘻𝘦  -   3𝘥𝘢𝘺𝘴 -   39
-•⪼ 🥈𝘚𝘪𝘭𝘷𝘦𝘳   -   7𝘥𝘢𝘺𝘴 -   59
-•⪼ 🥇𝘎𝘰𝘭𝘥    -  15𝘥𝘢𝘺𝘴 -  99
-•⪼ 🏆𝘗𝘭𝘢𝘵𝘪𝘯𝘶𝘮 -  1𝘮𝘰𝘯𝘵𝘩 -  179
-•⪼ 💎𝘋𝘪𝘢𝘮𝘰𝘯𝘥 -  2𝘮𝘰𝘯𝘵𝘩 -  339
+•⪼ ★Plans - ⏳Date - 💸Prix  
+•⪼ 🥉Bronze - 3 jours - 500f  
+•⪼ 🥈Argent - 7 jours - 1000f  
+•⪼ 🥇Or - 15 jours - 1500f  
+•⪼ 🏆Platine - 1 mois - 2500f  
+•⪼ 💎Diamant - 2 mois - 3000f  
 
-- 𝘋𝘢𝘪𝘭𝘺 𝘜𝘱𝘭𝘰𝘢𝘥 𝘓𝘪𝘮𝘪𝘵 𝘜𝘯𝘭𝘪𝘮𝘪𝘵𝘦𝘥
-- 𝘋𝘪𝘴𝘤𝘰𝘶𝘯𝘵 𝘈𝘭𝘭 𝘗𝘭𝘢𝘯 𝘙𝘴.9
+- Limite de téléchargement quotidien illimitée  
+- Remise sur tous les plans : En Dollars également 
     """
     
     UPGRADE_PLAN= """
-𝘗𝘭𝘢𝘯: 𝘗𝘳𝘰
-𝘋𝘢𝘵𝘦: 1 𝘮𝘰𝘯𝘵𝘩 
-𝘗𝘳𝘪𝘤𝘦: 179
-𝘓𝘪𝘮𝘪𝘵: 100 𝘎𝘉
+Plan : Pro  
+Date : 1 mois  
+Prix : 1000f  
+Limite : 100 Go  
 
-𝘗𝘭𝘢𝘯: 𝘜𝘭𝘵𝘢 𝘗𝘳𝘰 
-𝘋𝘢𝘵𝘦: 1 𝘮𝘰𝘯𝘵𝘩 
-𝘗𝘳𝘪𝘤𝘦: 199
-𝘓𝘪𝘮𝘪𝘵: 1000 𝘎𝘉
+Plan : Ultra Pro  
+Date : 1 mois  
+Prix : 1500f  
+Limite : 1000 Go  
 
-- 𝘋𝘪𝘴𝘤𝘰𝘶𝘯𝘵 𝘈𝘭𝘭 𝘗𝘭𝘢𝘯 𝘙𝘴.9
+- Remise sur tous les plans : en dollars également
     """
     
     THUMBNAIL = """
-🌌 <b><u>Hᴏᴡ Tᴏ Sᴇᴛ Tʜᴜᴍʙɴɪʟᴇ</u></b>
+<b><u>Comment définir une miniature</u></b>**
 
-<b>•></b> Sᴇɴᴅ Aɴy Pʜᴏᴛᴏ Tᴏ Aᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟy Sᴇᴛ Tʜᴜᴍʙɴɪʟᴇ.
-<b>•></b> /del_thumb Uꜱᴇ Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Dᴇʟᴇᴛᴇ Yᴏᴜʀ Oʟᴅ Tʜᴜᴍʙɴɪʟᴇ.
-<b>•></b> /view_thumb Uꜱᴇ Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Vɪᴇᴡ Yᴏᴜʀ Cᴜʀʀᴇɴᴛ Tʜᴜᴍʙɴɪʟᴇ.
+<b>•></b> Envoyez une photo pour définir automatiquement la miniature.  
+<b>•></b> /del_thumb Utilisez cette commande pour supprimer votre ancienne miniature.  
+<b>•></b> /view_thumb Utilisez cette commande pour voir votre miniature actuelle.
 """
     CAPTION= """
-📑 <b><u>Hᴏᴡ Tᴏ Sᴇᴛ Cᴜꜱᴛᴏᴍ Cᴀᴩᴛɪᴏɴ</u></b>
+<b><u>Comment définir une légende personnalisée</u></b>**
 
-<b>•></b> /set_caption - Uꜱᴇ Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Sᴇᴛ ᴀ Cᴜꜱᴛᴏᴍ Cᴀᴩᴛɪᴏɴ
-<b>•></b> /see_caption - Uꜱᴇ Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Vɪᴇᴡ Yᴏᴜʀ Cᴜꜱᴛᴏᴍ Cᴀᴩᴛɪᴏɴ
-<b>•></b> /del_caption - Uꜱᴇ Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Dᴇʟᴇᴛᴇ Yᴏᴜʀ Cᴜꜱᴛᴏᴍ Cᴀᴩᴛɪᴏɴ
+<b>•></b> /set_caption - Utilisez cette commande pour définir une légende personnalisée.  
+<b>•></b> /see_caption - Utilisez cette commande pour voir votre légende personnalisée.  
+<b>•></b> /del_caption - Utilisez cette commande pour supprimer votre légende personnalisée.  
 
-Exᴀᴍᴩʟᴇ:- `/set_caption 📕 Fɪʟᴇ Nᴀᴍᴇ: {filename}
-💾 Sɪᴢᴇ: {filesize}
-⏰ Dᴜʀᴀᴛɪᴏɴ: {duration}`
+Exemple : `/set_caption 📕 Nom du fichier : {filename}  
+💾 Taille : {filesize}  
+⏰ Durée : {duration}`
 """
     BOT_STATUS = """
-⚡️ ʙᴏᴛ sᴛᴀᴛᴜs ⚡️
+⚡️ STATUT DU BOT ⚡️
 
 ⌚️ ʙᴏᴛ ᴜᴩᴛɪᴍᴇ: `{}`
-👭 ᴛᴏᴛᴀʟ ᴜsᴇʀꜱ: `{}`
-💸 ᴛᴏᴛᴀʟ ᴘʀᴇᴍɪᴜᴍ ᴜsᴇʀs: `{}`
-֍ ᴜᴘʟᴏᴀᴅ: `{}`
-⊙ ᴅᴏᴡɴʟᴏᴀᴅ: `{}`
+👭 Utilisateurs: `{}`
+💸 Utilisateurs Premiums: `{}`
+֍ Téléversé: `{}`
+⊙ Télécharger: `{}`
 """
     LIVE_STATUS = """
-⚡ ʟɪᴠᴇ sᴇʀᴠᴇʀ sᴛᴀᴛᴜs ⚡
+⚡ STATUT DE VIE ⚡
 
-ᴜᴘᴛɪᴍᴇ: `{}`
-ᴄᴘᴜ: `{}%`
-ʀᴀᴍ: `{}%` 
-ᴛᴏᴛᴀʟ ᴅɪsᴋ: `{}`
-ᴜsᴇᴅ sᴘᴀᴄᴇ: `{} {}%`
-ғʀᴇᴇ sᴘᴀᴄᴇ: `{}`
-ᴜᴘʟᴏᴀᴅ: `{}`
-ᴅᴏᴡɴʟᴏᴀᴅ: `{}`
+Temps: `{}`
+CPU: `{}%`
+RAM: `{}%` 
+DISQUE TOTAL: `{}`
+Espace Utilisé: `{} {}%`
+Espace Gratuit: `{}`
+Téléversé: `{}`
+Télécharger: `{}`
 V𝟹.𝟶.𝟶 [STABLE]
 """
     DIGITAL_METADATA = """
-❪ SET CUSTOM METADATA ❫
+❪ DÉFINIR DES MÉTADONNÉES PERSONNALISÉES ❫
 
-- /metadata - Tᴏ Sᴇᴛ & Cʜᴀɴɢᴇ ʏᴏᴜʀ ᴍᴇᴛᴀᴅᴀᴛᴀ ᴄᴏᴅᴇ
+- /metadata - Pour définir et changer votre code de métadonnées.
 
-☞ Fᴏʀ Exᴀᴍᴘʟᴇ:-
+☞ Par exemple : 
 
-`--change-title @Rkn_Botz
---change-video-title @Rkn_Botz
---change-audio-title @Rkn_Botz
---change-subtitle-title @Rkn_Botz
---change-author @Rkn_Botz`
+`--change-title @BotZFlix  
+--change-video-title @BotZFlix  
+--change-audio-title @BotZFlix  
+--change-subtitle-title @BotZFlix  
+--change-author @BotZFlix`
 
-📥 Fᴏʀ Hᴇʟᴘ Cᴏɴᴛ. @Digital_Botz
+📥 Pour de l'aide, contactez @Kingcey
 """
     
     CUSTOM_FILE_NAME = """
-<u>🖋️ Custom File Name</u>
+<u>🖋 Nom de fichier personnalisé</u>
 
-you can pre-add a prefix and suffix along with your new filename
+Vous pouvez pré-ajouter un préfixe et un suffixe avec votre nouveau nom de fichier.
 
-➢ /set_prefix - To add a prefix along with your _filename.
-➢ /see_prefix - Tᴏ Sᴇᴇ Yᴏᴜʀ Pʀᴇғɪx !!
-➢ /del_prefix - Tᴏ Dᴇʟᴇᴛᴇ Yᴏᴜʀ Pʀᴇғɪx !!
-➢ /set_suffix - To add a suffix along with your filename_.
-➢ /see_suffix - Tᴏ Sᴇᴇ Yᴏᴜʀ Sᴜғғɪx !!
-➢ /del_suffix - Tᴏ Dᴇʟᴇᴛᴇ Yᴏᴜʀ Sᴜғғɪx !!
+➢ /set_prefix - Pour ajouter un préfixe à votre _nom de fichier.  
+➢ /see_prefix - Pour voir votre préfixe !!  
+➢ /del_prefix - Pour supprimer votre préfixe !!  
+➢ /set_suffix - Pour ajouter un suffixe à votre nom de fichier_.  
+➢ /see_suffix - Pour voir votre suffixe !!  
+➢ /del_suffix - Pour supprimer votre suffixe !!  
 
-Exᴀᴍᴩʟᴇ:- `/set_suffix @Digital_Botz`
-Exᴀᴍᴩʟᴇ:- `/set_prefix @Digital_Botz`
+**Exemple :** <code>/set_suffix @BotZFlix</code>  
+**Exemple :** <code>/set_prefix @BotZFlix</code>
 """
     
     #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
@@ -207,25 +204,27 @@ Exᴀᴍᴩʟᴇ:- `/set_prefix @Digital_Botz`
     # ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 
     SEND_METADATA = """
-❪ SET CUSTOM METADATA ❫
+❪ DÉFINIR DES MÉTADONNÉES PERSONNALISÉES ❫
 
-☞ Fᴏʀ Exᴀᴍᴘʟᴇ:-
+- /metadata - Pour définir et changer votre code de métadonnées.
 
-`--change-title @Rkn_Botz
---change-video-title @Rkn_Botz
---change-audio-title @Rkn_Botz
---change-subtitle-title @Rkn_Botz
---change-author @Rkn_Botz`
+☞ Par exemple : 
 
-📥 Fᴏʀ Hᴇʟᴘ Cᴏɴᴛ. @Digital_Botz
+`--change-title @BotZFlix  
+--change-video-title @BotZFlix  
+--change-audio-title @BotZFlix  
+--change-subtitle-title @BotZFlix  
+--change-author @BotZFlix`
+
+📥 Pour de l'aide, contactez @Kingcey
 """
     
     RKN_PROGRESS = """<b>\n
-╭━━━━❰RKN PROCESSING...❱━➣
-┣⪼ 🗃️ ꜱɪᴢᴇ: {1} | {2}
-┣⪼ ⏳️ ᴅᴏɴᴇ : {0}%
-┣⪼ 🚀 ꜱᴩᴇᴇᴅ: {3}/s
-┣⪼ ⏰️ ᴇᴛᴀ: {4}
+╭━━━━❰Processus en cours.......❱━➣  
+┣⪼ 🗃 Taille : {1} | {2}  
+┣⪼ ⏳ Fait : {0}%  
+┣⪼ 🚀 Vitesse : {3}/s  
+┣⪼ ⏰ ETA : {4}  
 ╰━━━━━━━━━━━━━━━➣ </b>"""
 
 # Rkn Developer 
