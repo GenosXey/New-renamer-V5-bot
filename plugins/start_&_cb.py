@@ -43,16 +43,16 @@ from helper.utils import humanbytes
 from plugins import __version__ as _bot_version_, __developer__, __database__, __library__, __language__, __programer__
 
 upgrade_button = InlineKeyboardMarkup([[        
-        InlineKeyboardButton('buy premium ✓', user_id=int(6705898491)),
+        InlineKeyboardButton('Acheter Premium ✓', user_id=int(6705898491)),
          ],[
-        InlineKeyboardButton("Bᴀᴄᴋ", callback_data = "start")
+        InlineKeyboardButton("Retour", callback_data = "start")
 ]])
 
 upgrade_trial_button = InlineKeyboardMarkup([[        
-        InlineKeyboardButton('buy premium ✓', user_id=int(6705898491)),
+        InlineKeyboardButton('Acheter Premium ✓', user_id=int(6705898491)),
          ],[
-        InlineKeyboardButton("ᴛʀɪᴀʟ - 𝟷𝟸 ʜᴏᴜʀs ✓", callback_data = "give_trial"),
-        InlineKeyboardButton("Bᴀᴄᴋ", callback_data = "start")
+        InlineKeyboardButton("Essai - 12 heures ✓", callback_data = "give_trial"),
+        InlineKeyboardButton("Retour", callback_data = "start")
 ]])
 
 
@@ -60,15 +60,15 @@ upgrade_trial_button = InlineKeyboardMarkup([[
 @Client.on_message(filters.private & filters.command("start"))
 async def start(client, message):
     start_button = [[        
-        InlineKeyboardButton('Uᴩᴅᴀ𝚃ᴇꜱ', url='https://t.me/Digital_Botz'),
-        InlineKeyboardButton('Sᴜᴩᴩᴏʀ𝚃', url='https://t.me/DigitalBotz_Support')
+        InlineKeyboardButton('Mises à jour', url='https://t.me/BotZFlix'),
+        InlineKeyboardButton('Support', url='https://t.me/BotZFlixSupport')
         ],[
-        InlineKeyboardButton('Aʙᴏυᴛ', callback_data='about'),
-        InlineKeyboardButton('Hᴇʟᴩ', callback_data='help')       
+        InlineKeyboardButton('À propos', callback_data='about'),
+        InlineKeyboardButton('Aide', callback_data='help')       
          ]]
         
     if client.premium:
-        start_button.append([InlineKeyboardButton('💸 ᴜᴘɢʀᴀᴅᴇ ᴛᴏ ᴘʀᴇᴍɪᴜᴍ 💸', callback_data='upgrade')])
+        start_button.append([InlineKeyboardButton('💸 Mettre à niveau vers premium 💸', callback_data='upgrade')])
             
     user = message.from_user
     await digital_botz.add_user(client, message) 
@@ -117,12 +117,12 @@ async def myplan(client, message):
 
             text = f"ᴜꜱᴇʀ :- {user}\nᴜꜱᴇʀ ɪᴅ :- <code>{user_id}</code>\nᴘʟᴀɴ :- `{type}`\nᴅᴀɪʟʏ ᴜᴘʟᴏᴀᴅ ʟɪᴍɪᴛ :- `{humanbytes(limit)}`\nᴛᴏᴅᴀʏ ᴜsᴇᴅ :- `{humanbytes(used)}`\nʀᴇᴍᴀɪɴ :- `{humanbytes(remain)}`\nᴇxᴘɪʀᴇᴅ ᴅᴀᴛᴇ :- ʟɪғᴇᴛɪᴍᴇ\n\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴛᴀᴋᴇ ᴘʀᴇᴍɪᴜᴍ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ 👇"
 
-            await message.reply_text(text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💸 ᴄʜᴇᴄᴋᴏᴜᴛ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴꜱ 💸", callback_data='upgrade')]]), quote=True)
+            await message.reply_text(text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💸 Vérifier les plans premium 💸", callback_data='upgrade')]]), quote=True)
 
         else:
             m=await message.reply_sticker("CAACAgIAAxkBAAIBTGVjQbHuhOiboQsDm35brLGyLQ28AAJ-GgACglXYSXgCrotQHjibHgQ")
-            await message.reply_text(f"ʜᴇʏ {user},\n\nʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴀɴʏ ᴀᴄᴛɪᴠᴇ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴs, ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴛᴀᴋᴇ ᴘʀᴇᴍɪᴜᴍ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ 👇",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💸 ᴄʜᴇᴄᴋᴏᴜᴛ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴꜱ 💸", callback_data='upgrade')]]))			 
+            await message.reply_text(f"Hey {user},\n\nVous n'avez pas de plans premium actifs. Si vous souhaitez souscrire à un plan premium, cliquez sur le bouton ci-dessous. 👇",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💸 Vérifier les plans premium 💸", callback_data='upgrade')]]))			 
             await asyncio.sleep(2)
             await m.delete()
 
@@ -149,15 +149,15 @@ async def cb_handler(client, query: CallbackQuery):
     data = query.data 
     if data == "start":
         start_button = [[        
-        InlineKeyboardButton('Uᴩᴅᴀ𝚃ᴇꜱ', url='https://t.me/Digital_Botz'),
-        InlineKeyboardButton('Sᴜᴩᴩᴏʀ𝚃', url='https://t.me/DigitalBotz_Support')
+        InlineKeyboardButton('Mise à jour', url='https://t.me/BotZFlix'),
+        InlineKeyboardButton('Sᴜᴩᴩᴏʀ𝚃', url='https://t.me/BotZFlixSupport')
         ],[
-        InlineKeyboardButton('Aʙᴏυᴛ', callback_data='about'),
-        InlineKeyboardButton('Hᴇʟᴩ', callback_data='help')       
+        InlineKeyboardButton('À propos', callback_data='about'),
+        InlineKeyboardButton('Aide', callback_data='help')       
          ]]
             
         if client.premium:
-            start_button.append([InlineKeyboardButton('💸 ᴜᴘɢʀᴀᴅᴇ ᴛᴏ ᴘʀᴇᴍɪᴜᴍ 💸', callback_data='upgrade')])
+            start_button.append([InlineKeyboardButton('💸 Mettre à niveau vers premium 💸', callback_data='upgrade')])
             
         await query.message.edit_text(
             text=rkn.START_TXT.format(query.from_user.mention),
@@ -170,30 +170,30 @@ async def cb_handler(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
                 #⚠️ don't change source code & source link ⚠️ #
-                InlineKeyboardButton("ᴛʜᴜᴍʙɴᴀɪʟ", callback_data = "thumbnail"),
-                InlineKeyboardButton("ᴄᴀᴘᴛɪᴏɴ", callback_data = "caption")
+                InlineKeyboardButton("Miniature", callback_data = "thumbnail"),
+                InlineKeyboardButton("Légende", callback_data = "caption")
                 ],[          
-                InlineKeyboardButton("ᴄᴜsᴛᴏᴍ ғɪʟᴇ ɴᴀᴍᴇ", callback_data = "custom_file_name")    
+                InlineKeyboardButton("Nom de fichier personnalisé", callback_data = "custom_file_name")    
                 ],[          
-                InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data = "about"),
-                InlineKeyboardButton("ᴍᴇᴛᴀᴅᴀᴛᴀ", callback_data = "digital_meta_data")
+                InlineKeyboardButton("À propos", callback_data = "about"),
+                InlineKeyboardButton("Aide", callback_data = "digital_meta_data")
                                      ],[
-                InlineKeyboardButton("Bᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("Retour", callback_data = "start")
                   ]]))         
         
     elif data == "about":
         about_button = [[
          #⚠️ don't change source code & source link ⚠️ #
-        InlineKeyboardButton("𝚂ᴏᴜʀᴄᴇ", callback_data = "source_code"), #Whoever is deploying this repo is given a warning ⚠️ not to remove this repo link #first & last warning ⚠️
-        InlineKeyboardButton("ʙᴏᴛ sᴛᴀᴛᴜs", callback_data = "bot_status")
+        InlineKeyboardButton("ZFlix-Team", url='t.me/ZFlixTeam'), #Whoever is deploying this repo is given a warning ⚠️ not to remove this repo link #first & last warning ⚠️
+        InlineKeyboardButton("Statut du bot", callback_data = "bot_status")
         ],[
-        InlineKeyboardButton("ʟɪᴠᴇ sᴛᴀᴛᴜs", callback_data = "live_status")           
+        InlineKeyboardButton("Statut en direct", callback_data = "live_status")           
         ]]
         if client.premium:
-            about_button[-1].append(InlineKeyboardButton("ᴜᴘɢʀᴀᴅᴇ", callback_data = "upgrade"))
-            about_button.append([InlineKeyboardButton("Bᴀᴄᴋ", callback_data = "start")])
+            about_button[-1].append(InlineKeyboardButton("Mettre à niveau", callback_data = "upgrade"))
+            about_button.append([InlineKeyboardButton("Retour", callback_data = "start")])
         else:
-            about_button[-1].append(InlineKeyboardButton("Bᴀᴄᴋ", callback_data = "start"))
+            about_button[-1].append(InlineKeyboardButton("Retour", callback_data = "start"))
             
         await query.message.edit_text(
             text=rkn.ABOUT_TXT.format(client.mention, __developer__, __programer__, __library__, __language__, __database__, _bot_version_),
@@ -224,9 +224,9 @@ async def cb_handler(client, query: CallbackQuery):
         free_trial_status = await digital_botz.get_free_trial_status(query.from_user.id)
         if not free_trial_status:            
             await digital_botz.give_free_trail(query.from_user.id)
-            new_text = "**ʏᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴛʀɪᴀʟ ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ ғᴏʀ 𝟷𝟸 ʜᴏᴜʀs.\n\nʏᴏᴜ ᴄᴀɴ ᴜsᴇ ꜰʀᴇᴇ ᴛʀᴀɪʟ ꜰᴏʀ 𝟷𝟸 ʜᴏᴜʀs ꜰʀᴏᴍ ɴᴏᴡ 😀\n\nआप अब से 𝟷𝟸 घण्टा के लिए निःशुल्क ट्रायल का उपयोग कर सकते हैं 😀**"
+            new_text = "**Votre essai premium a été ajouté pour 12 heures.\n\nVous pouvez utiliser l'essai gratuit pendant 12 heures à partir de maintenant 😀 😀**"
         else:
-            new_text = "**🤣 ʏᴏᴜ ᴀʟʀᴇᴀᴅʏ ᴜsᴇᴅ ғʀᴇᴇ ɴᴏᴡ ɴᴏ ᴍᴏʀᴇ ғʀᴇᴇ ᴛʀᴀɪʟ. ᴘʟᴇᴀsᴇ ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ʜᴇʀᴇ ᴀʀᴇ ᴏᴜʀ 👉 /plans**"
+            new_text = "**🤣 Vous avez déjà utilisé l'essai gratuit, il n'y a plus d'essai gratuit disponible. Veuillez acheter un abonnement ici 👉 /plans**"
         await client.send_message(query.from_user.id, text=new_text)
 
     elif data == "thumbnail":
@@ -241,21 +241,21 @@ async def cb_handler(client, query: CallbackQuery):
             text=rkn.CAPTION,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-             InlineKeyboardButton(" Bᴀᴄᴋ", callback_data = "help")]])) 
+             InlineKeyboardButton(" Retour", callback_data = "help")]])) 
       
     elif data == "custom_file_name":
         await query.message.edit_text(
             text=rkn.CUSTOM_FILE_NAME,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-             InlineKeyboardButton(" Bᴀᴄᴋ", callback_data = "help")]])) 
+             InlineKeyboardButton(" Retour", callback_data = "help")]])) 
       
     elif data == "digital_meta_data":
         await query.message.edit_text(
             text=rkn.DIGITAL_METADATA,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-             InlineKeyboardButton(" Bᴀᴄᴋ", callback_data = "help")]])) 
+             InlineKeyboardButton(" Retour", callback_data = "help")]])) 
       
     elif data == "bot_status":
         total_users = await digital_botz.total_users_count()
@@ -297,10 +297,10 @@ async def cb_handler(client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup([[
                 #⚠️ don't change source code & source link ⚠️ #
            #Whoever is deploying this repo is given a warning ⚠️ not to remove this repo link #first & last warning ⚠️   
-                InlineKeyboardButton("💞 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ 💞", url="https://github.com/DigitalBotz/Digital-Rename-Bot")
+                InlineKeyboardButton("💞 ZFlix-Team 💞", url="https://t.me/ZFlixTeam")
             ],[
-                InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data = "close"),
-                InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("🔒 Fermer", callback_data = "close"),
+                InlineKeyboardButton("◀️ Retour", callback_data = "start")
                  ]])          
         )
     elif data == "close":
