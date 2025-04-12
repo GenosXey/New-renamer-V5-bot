@@ -60,7 +60,7 @@ async def see_caption(client, message):
     else:
        await rkn.edit("__**😔 Vous n'avez pas de légende.**__")
 
-@Client.on_message(filters.private & filters.command(['view_thVous n'avez pas de légende.umb', 'viewthumb']))
+@Client.on_message(filters.private & filters.command(['view_thumb', 'viewthumb']))
 async def viewthumb(client, message):
     rkn = await message.reply_text("__**Veuillez patienter**__")
     thumb = await digital_botz.get_thumbnail(message.from_user.id)
