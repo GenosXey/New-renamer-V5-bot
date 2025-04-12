@@ -46,7 +46,7 @@ class Config(object):
     DB_URL = os.environ.get("DB_URL","mongodb+srv://Aniflix:Lipun123@aniflix.q2wina5.mongodb.net/?retryWrites=true&w=majority&appName=Aniflix")
  
     # other configs
-    RKN_PIC = os.environ.get("RKN_PIC", "https://telegra.ph/file/b746aadfe59959eb76f59.jpg")
+    RKN_PIC = os.environ.get("RKN_PIC", "https://iili.io/3cZ02kl.md.jpg")
     ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '7428552084').split()]
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002376378205"))
 
@@ -69,9 +69,9 @@ class Config(object):
 
 class rkn(object):
     # part of text configuration
-    START_TXT = """<b>Ｈ𝙰𝙸, {}👋
+    START_TXT = """<b>Yo, {}👋
 
-Ceci est un bot de renommage avancé et puissant. En utilisant ce bot, vous pouvez renommer et changer la miniature de votre fichier. Vous pouvez également convertir des vidéos en fichiers et des fichiers en vidéos. CE BOT SUPPORTE ÉGALEMENT DES MINIATURES ET CAPTIONS PERSONNALISÉES.
+Ceci est un bot de renommage avancé et puissant. En utilisant ce bot,\n\nVous pouvez renommer et changer la miniature de votre fichier. Vous pouvez également convertir des vidéos en fichiers et des fichiers en vidéos\n\nCE BOT SUPPORTE ÉGALEMENT DES MINIATURES ET CAPTIONS PERSONNALISÉES.
 
 <blockquote>Ce bot a été créé par :  @BotZFlix 💞</blockquote></b>"""
 
