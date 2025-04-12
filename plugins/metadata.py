@@ -38,19 +38,19 @@ from helper.database import digital_botz
 from pyromod.exceptions import ListenerTimeout
 from config import rkn
 
-TRUE = [[InlineKeyboardButton('ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏɴ', callback_data='metadata_1'),
+TRUE = [[InlineKeyboardButton('métadonnée activée', callback_data='metadata_1'),
        InlineKeyboardButton('✅', callback_data='metadata_1')
        ],[
-       InlineKeyboardButton('Sᴇᴛ Cᴜsᴛᴏᴍ Mᴇᴛᴀᴅᴀᴛᴀ', callback_data='cutom_metadata')]]
-FALSE = [[InlineKeyboardButton('ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏғғ', callback_data='metadata_0'),
+       InlineKeyboardButton('Définir des métadonnées personnalisées', callback_data='cutom_metadata')]]
+FALSE = [[InlineKeyboardButton('métadonnée désactivée', callback_data='metadata_0'),
         InlineKeyboardButton('❌', callback_data='metadata_0')
        ],[
-       InlineKeyboardButton('Sᴇᴛ Cᴜsᴛᴏᴍ Mᴇᴛᴀᴅᴀᴛᴀ', callback_data='cutom_metadata')]]
+       InlineKeyboardButton('Définir des métadonnées personnalisées', callback_data='cutom_metadata')]]
 
 
 @Client.on_message(filters.private & filters.command('metadata'))
 async def handle_metadata(bot: Client, message: Message):
-    RknDev = await message.reply_text("**Please Wait...**", reply_to_message_id=message.id)
+    RknDev = await message.reply_text("**Veuillez patienter...**", reply_to_message_id=message.id)
     bool_metadata = await digital_botz.get_metadata_mode(message.from_user.id)
     user_metadata = await digital_botz.get_metadata_code(message.from_user.id)
 
@@ -76,7 +76,7 @@ async def query_metadata(bot: Client, query: CallbackQuery):
             metadata = await bot.ask(text=rkn.SEND_METADATA, chat_id=query.from_user.id, filters=filters.text, timeout=30, disable_web_page_preview=True)
             RknDev = await query.message.reply_text("**Please Wait...**", reply_to_message_id=metadata.id)
             await digital_botz.set_metadata_code(query.from_user.id, metadata_code=metadata.text)
-            await RknDev.edit("**Your Metadata Code Set Successfully ✅**")
+            await RknDev.edit("**Votre code de métadonnées a été défini avec succès ✅**")
         except ListenerTimeout:
             await query.message.reply_text("⚠️ Error!!\n\n**Request timed out.**\nRestart by using /metadata", reply_to_message_id=query.message.id)
         except Exception as e:
