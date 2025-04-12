@@ -76,12 +76,12 @@ Ceci est un bot de renommage avancé et puissant. En utilisant ce bot,\n\nVous p
 <blockquote>Ce bot a été créé par :  @BotZFlix 💞</blockquote></b>"""
 
     ABOUT_TXT = """<b>╭───────────⍟
-├🤖 ᴍy ɴᴀᴍᴇ : {}
+<blockquote>├🤖 ᴍy ɴᴀᴍᴇ : {}</blockquote>
 ├🖥️ Dᴇᴠᴇʟᴏᴩᴇʀꜱ : <a href='t.me/Kingcey'>◡̈⃝ㅤ🇰ιηg¢єу</a>
-├👨‍💻 Pʀᴏɢʀᴀᴍᴇʀ : {}
-├📕 Lɪʙʀᴀʀy : {}
-├✏️ Lᴀɴɢᴜᴀɢᴇ: {}
-├💾 Dᴀᴛᴀ Bᴀꜱᴇ: {}
+├👨‍💻 Pʀᴏɢʀᴀᴍᴇʀ : <a href='t.me/Kingcey'>◡̈⃝ㅤ🇰ιηg¢єу</a>
+├📕 Lɪʙʀᴀʀy : <a href='t.me/pyrogram.org'>Pyrogram</a>
+├✏️ Lᴀɴɢᴜᴀɢᴇ: <a href='t.me/python.org'>Python3</a>
+├💾 Dᴀᴛᴀ Bᴀꜱᴇ: <a href='t.me/BotZFlix'>CloudFare</a>
 ├📊 ᴠᴇʀsɪᴏɴ: 2V2.0</b>     
 ╰───────────────⍟ """
 
