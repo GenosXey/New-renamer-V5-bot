@@ -73,7 +73,7 @@ class rkn(object):
 
 Ceci est un bot de renommage avancé et puissant. En utilisant ce bot, vous pouvez renommer et changer la miniature de votre fichier. Vous pouvez également convertir des vidéos en fichiers et des fichiers en vidéos. CE BOT SUPPORTE ÉGALEMENT DES MINIATURES ET CAPTIONS PERSONNALISÉES.
 
-Ce bot a été créé par :  @BotZFlix 💞</b>"""
+<blockquote>Ce bot a été créé par :  @BotZFlix 💞</blockquote></b>"""
 
     ABOUT_TXT = """<b>╭───────────⍟
 ├🤖 ᴍy ɴᴀᴍᴇ : {}
