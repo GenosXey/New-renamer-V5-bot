@@ -48,7 +48,7 @@ async def delete_prefix(client, message):
     RknDev = await message.reply_text("Veuillez patienter ...", reply_to_message_id=message.id)
     prefix = await digital_botz.get_prefix(message.from_user.id)
     if not prefix:
-        return await RknDev.edit("__**😔 ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ ᴘʀᴇꜰɪx**__")
+        return await RknDev.edit("__**😔 Tu n'as pas de préfixe**__")
     await digital_botz.set_prefix(message.from_user.id, None)
     await RknDev.edit("__**❌️ ᴘʀᴇꜰɪx ᴅᴇʟᴇᴛᴇᴅ**__")
 
@@ -57,15 +57,15 @@ async def see_prefix(client, message):
     RknDev = await message.reply_text("Veuillez patienter ...", reply_to_message_id=message.id)
     prefix = await digital_botz.get_prefix(message.from_user.id)
     if prefix:
-        await RknDev.edit(f"**ʏᴏᴜʀ ᴘʀᴇꜰɪx:-**\n\n`{prefix}`")
+        await RknDev.edit(f"**ton préfixe:-**\n\n`{prefix}`")
     else:
-        await RknDev.edit("__**😔 ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ ᴘʀᴇꜰɪx**__")
+        await RknDev.edit("__**😔 tu n'as pas de préfixe**__")
 
 # SUFFIX COMMOND ✨
 @Client.on_message(filters.private & filters.command('set_suffix'))
 async def add_suffix(client, message):
     if len(message.command) == 1:
-        return await message.reply_text("**__Give The Suffix__\n\nExᴀᴍᴩʟᴇ:- `/set_suffix @Rkn_Bots`**")
+        return await message.reply_text("**__Donne le suffixe.__\n\nExemple:- `/set_suffix @BotZFlix`**")
     suffix = message.text.split(" ", 1)[1]
     RknDev = await message.reply_text("Veuillez patienter ...", reply_to_message_id=message.id)
     await digital_botz.set_suffix(message.from_user.id, suffix)
