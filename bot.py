@@ -106,7 +106,7 @@ class DigitalRenameBot(Client):
 
         if Config.LOG_CHANNEL:
             try:
-                curr = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+                curr = datetime.datetime.now(pytz.timezone("Africa/Lome"))
                 date = curr.strftime('%d %B, %Y')
                 time = curr.strftime('%I:%M:%S %p')
                 log_msg = (f"**__{me.mention} Iᵀ Rᴇsᴛᴀʀᴛᴇᴅ !!**\n\n"
