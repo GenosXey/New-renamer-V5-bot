@@ -79,7 +79,7 @@ async def start(client, message):
 
     for sticker_id in stickers:
         sent = await message.reply_sticker(sticker_id)
-        await asyncio.sleep(1.5)
+        await asyncio.sleep(0.7)
         await sent.delete()
 
     user = message.from_user
@@ -89,12 +89,12 @@ async def start(client, message):
             Config.RKN_PIC,
             caption=rkn.START_TXT.format(user.mention),
             reply_markup=InlineKeyboardMarkup(start_button),
-            parse_mode="html"
+            parse_mode="HTML"
         )
     else:
         await message.reply_text(
             text=rkn.START_TXT.format(user.mention),
             reply_markup=InlineKeyboardMarkup(start_button),
             disable_web_page_preview=True,
-            parse_mode="html"
+            parse_mode="HTML"
         )
