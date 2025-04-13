@@ -60,11 +60,11 @@ upgrade_trial_button = InlineKeyboardMarkup([[
 @Client.on_message(filters.private & filters.command("start"))
 async def start(client, message):
     start_button = [[        
-        InlineKeyboardButton('Updates', url='https://t.me/Digital_Botz'),
-        InlineKeyboardButton('Support', url='https://t.me/DigitalBotz_Support')
+        InlineKeyboardButton('Mis à jour', url='https://t.me/BotZFlix'),
+        InlineKeyboardButton('Support', url='https://t.me/BotZFlixSupport')
         ],[
-        InlineKeyboardButton('About', callback_data='about'),
-        InlineKeyboardButton('Help', callback_data='help')       
+        InlineKeyboardButton('À propos', callback_data='about'),
+        InlineKeyboardButton('Aide', callback_data='help')       
          ]]
         
     if client.premium:
