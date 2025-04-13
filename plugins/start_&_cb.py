@@ -89,12 +89,12 @@ async def start(client, message):
             Config.RKN_PIC,
             caption=rkn.START_TXT.format(user.mention),
             reply_markup=InlineKeyboardMarkup(start_button),
-            parse_mode="HTML"
+            parse_mode="html"
         )
     else:
         await message.reply_text(
             text=rkn.START_TXT.format(user.mention),
             reply_markup=InlineKeyboardMarkup(start_button),
             disable_web_page_preview=True,
-            parse_mode="HTML"
+            parse_mode="html"
         )
