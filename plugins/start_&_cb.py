@@ -43,13 +43,13 @@ from helper.utils import humanbytes
 from plugins import __version__ as _bot_version_, __developer__, __database__, __library__, __language__, __programer__
 
 upgrade_button = InlineKeyboardMarkup([[        
-        InlineKeyboardButton('Acheter Premium ✓', user_id=int(6705898491)),
+        InlineKeyboardButton('Acheter Premium ✓', user_id=int(7428552084)),
          ],[
         InlineKeyboardButton("Retour", callback_data = "start")
 ]])
 
 upgrade_trial_button = InlineKeyboardMarkup([[        
-        InlineKeyboardButton('Acheter Premium ✓', user_id=int(6705898491)),
+        InlineKeyboardButton('Acheter Premium ✓', user_id=int(7428552084)),
          ],[
         InlineKeyboardButton("Essai - 12 heures ✓", callback_data = "give_trial"),
         InlineKeyboardButton("Retour", callback_data = "start")
@@ -70,8 +70,8 @@ async def start(client, message):
     if client.premium:
         start_button.append([InlineKeyboardButton('💸 Mettre à niveau vers premium 💸', callback_data='upgrade')])
 
-    # ✅ Send sticker before start message
-    await message.reply_sticker("CAACAgUAAxkBAAIE4Gf6qY1590UCET8-25D_Mi5OsSduAAImCQACzoAZVchVZroLpXfgHgQ")
+    # ✅ Send sticker before start message added by me: (@Kingcey)
+    await message.reply_sticker("CAACAgIAAxkBAAIE8mf7IT_aZz3nBYBnDZvgd3qI7OCpAALMAQACPQ3oBMBrXcbV0L2fHgQ")
 
     user = message.from_user
     await digital_botz.add_user(client, message) 
@@ -123,8 +123,8 @@ async def myplan(client, message):
             await message.reply_text(text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💸 Vérifier les plans premium 💸", callback_data='upgrade')]]), quote=True)
 
         else:
-            m=await message.reply_sticker("CAACAgIAAxkBAAIBTGVjQbHuhOiboQsDm35brLGyLQ28AAJ-GgACglXYSXgCrotQHjibHgQ")
-            await message.reply_text(f"Hey {user},\n\nVous n'avez pas de plans premium actifs. Si vous souhaitez souscrire à un plan premium, cliquez sur le bouton ci-dessous. 👇",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💸 Vérifier les plans premium 💸", callback_data='upgrade')]]))			 
+            m=await message.reply_sticker("CAACAgIAAxkBAAIE8mf7IT_aZz3nBYBnDZvgd3qI7OCpAALMAQACPQ3oBMBrXcbV0L2fHgQ")
+            await message.reply_text(f"Hey {user},\n\nVous n'avez pas de plans premium actifs. Si vous souhaitez souscrire à un plan premium, contactez @Kingcey 👇",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💸 Kingcey Premium 💸", url='t.me/kingcey')]]))			 
             await asyncio.sleep(2)
             await m.delete()
