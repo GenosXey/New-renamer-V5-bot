@@ -55,7 +55,7 @@ class Config(object):
 
     # premium mode feature ✅
     UPLOAD_LIMIT_MODE = True 
-    PREMIUM_MODE = True 
+    PREMIUM_MODE = False 
     
     #force subs
     try:
