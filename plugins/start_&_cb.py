@@ -72,11 +72,11 @@ async def start(client, message):
 
     # ✅ Affiche tous les stickers l’un après l’autre puis les supprime
     stickers = [
-        "CAACAgUAAxkBAAIE4Gf6qY1590UCET8-25D_Mi5OsSduAAImCQACzoAZVchVZroLpXfgHgQ",
         "CAACAgUAAxkBAAIFOGf7e3t7xbexqML4lUBov33y0fwWAALgCAACW_HQVoT7skQi0IBNHgQ",
         "CAACAgUAAxkBAAIFPGf7e32N9GQtxFUBhRpnBcdq-n2VAAIUCwACrZTRViZ7bFXnR26eHgQ",
         "CAACAgUAAxkBAAIFQGf7e4BWBoddo5yVau4uEnW05RtbAAKLCwACwurRVj5eDbteWRIYHgQ",
-        "CAACAgUAAxkBAAIFRGf7e4JmicaVg9hMejExAlZj778PAAITCAACVknZVofykXMFYuv7HgQ"
+        "CAACAgUAAxkBAAIFRGf7e4JmicaVg9hMejExAlZj778PAAITCAACVknZVofykXMFYuv7HgQ",
+        "CAACAgUAAxkBAAIFSGf7e4UbEvASETSDmY6k-9iSV1gBAAJFCgACTKLRVklE19TmFp_jHgQ"
     ]
 
     for sticker_id in stickers:
