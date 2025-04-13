@@ -194,13 +194,26 @@ Vous pouvez pré-ajouter un préfixe et un suffixe avec votre nouveau nom de fic
     #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️ Dᴏɴ'ᴛ Rᴇᴍᴏᴠᴇ Oᴜʀ Cʀᴇᴅɪᴛꜱ @RknDeveloper🙏🥲
     # ᴡʜᴏᴇᴠᴇʀ ɪs ᴅᴇᴘʟᴏʏɪɴɢ ᴛʜɪs ʀᴇᴘᴏ ɪs ᴡᴀʀɴᴇᴅ ⚠️ ᴅᴏ ɴᴏᴛ ʀᴇᴍᴏᴠᴇ ᴄʀᴇᴅɪᴛs ɢɪᴠᴇɴ ɪɴ ᴛʜɪs ʀᴇᴘᴏ #ғɪʀsᴛ ᴀɴᴅ ʟᴀsᴛ ᴡᴀʀɴɪɴɢ ⚠️
-    DEV_TXT = """<b><u>Sᴩᴇᴄɪᴀʟ Tʜᴀɴᴋꜱ & Dᴇᴠᴇʟᴏᴩᴇʀꜱ</b></u>
-    
-» 𝗦𝗢𝗨𝗥𝗖𝗘 𝗖𝗢𝗗𝗘 : <a href=https://github.com/DigitalBotz/Digital-Rename-Bot>Digital-Rename-Bot</a>
+    DEV_TXT = """<b><u>⛔️⛔️⛔️MESSAGE URGENT‼️‼️‼️ </u>
 
-• ❣️ <a href=https://github.com/RknDeveloper>RknDeveloper</a>
-• ❣️ <a href=https://github.com/DigitalBotz>DigitalBotz</a>
-• ❣️ <a href=https://github.com/JayMahakal98>Jay Mahakal</a> """
+Rejoignez Notre Groupe de film & de séries. Dans ce groupe, il faut juste écrire le nom du film ou de la série, pour le recevoir
+
+<u>EXEMPLE:</u>
+
+<code>Loki</code> 
+<code>Warrior</code>
+<code>Hulk</code>
+<code>Squid Game</code>
+
+En écrivant le nom, Un bot va vous l'envoyé. il faut et seulement écrire le nom du film.
+
+
+<a href='t.me/ZFlixTeam'>Rejoindre le groupe</a>
+<a href='t.me/ZFlixTeam'>Rejoindre le groupe</a>
+<a href='t.me/ZFlixTeam'>Rejoindre le groupe</a>
+
+
+pour tout Problème contactez moi : <a href='t.me/Kingcey'>◡̈⃝ㅤ🇰ιηg¢єу</a> """
     # ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 
     SEND_METADATA = """
