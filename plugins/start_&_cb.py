@@ -110,6 +110,7 @@ async def start(client, message):
 @Client.on_message(filters.private & filters.command("myplan"))
 async def myplan(client, message):
     if not client.premium:
+        return  # ← suis obligée de mettre de le rtrun ou je ne sais quoi
 
     user_id = message.from_user.id
     user = message.from_user.mention
