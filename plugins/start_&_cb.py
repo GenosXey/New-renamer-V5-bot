@@ -59,41 +59,52 @@ upgrade_trial_button = InlineKeyboardMarkup([[
         
 @Client.on_message(filters.private & filters.command("start"))
 async def start(client, message):
-
-    # ✅ Affiche tous les stickers l’un après l’autre puis les supprime
-stickers = [
-    "CAACAgUAAxkBAAIE4Gf6qY1590UCET8-25D_Mi5OsSduAAImCQACzoAZVchVZroLpXfgHgQ",
-    "CAACAgUAAxkBAAIFOGf7e3t7xbexqML4lUBov33y0fwWAALgCAACW_HQVoT7skQi0IBNHgQ",
-    "CAACAgUAAxkBAAIFPGf7e32N9GQtxFUBhRpnBcdq-n2VAAIUCwACrZTRViZ7bFXnR26eHgQ",
-    "CAACAgUAAxkBAAIFQGf7e4BWBoddo5yVau4uEnW05RtbAAKLCwACwurRVj5eDbteWRIYHgQ",
-    "CAACAgUAAxkBAAIFRGf7e4JmicaVg9hMejExAlZj778PAAITCAACVknZVofykXMFYuv7HgQ"
-]
-
-for sticker_id in stickers:
-    try:
-        s = await client.send_sticker(chat_id=message.chat.id, sticker=sticker_id)
-        await asyncio.sleep(0.7)
-        await s.delete()
-    except:
-        pass
-
     start_button = [[        
-        InlineKeyboardButton('Uᴩᴅᴀ𝚃ᴇꜱ', url='https://t.me/Digital_Botz'),
-        InlineKeyboardButton('Sᴜᴩᴩᴏʀ𝚃', url='https://t.me/DigitalBotz_Support')
+        InlineKeyboardButton('Updates', url='https://t.me/Digital_Botz'),
+        InlineKeyboardButton('Support', url='https://t.me/DigitalBotz_Support')
         ],[
-        InlineKeyboardButton('Aʙᴏυᴛ', callback_data='about'),
-        InlineKeyboardButton('Hᴇʟᴩ', callback_data='help')       
+        InlineKeyboardButton('About', callback_data='about'),
+        InlineKeyboardButton('Help', callback_data='help')       
          ]]
         
     if client.premium:
-        start_button.append([InlineKeyboardButton('💸 ᴜᴘɢʀᴀᴅᴇ ᴛᴏ ᴘʀᴇᴍɪᴜᴍ 💸', callback_data='upgrade')])
-            
+        start_button.append([InlineKeyboardButton('💸 Upgrade to Premium 💸', callback_data='upgrade')])
+
+    # ✅ Affiche tous les stickers l’un après l’autre puis les supprime
+    stickers = [
+        "CAACAgUAAxkBAAIE4Gf6qY1590UCET8-25D_Mi5OsSduAAImCQACzoAZVchVZroLpXfgHgQ",
+        "CAACAgUAAxkBAAIFOGf7e3t7xbexqML4lUBov33y0fwWAALgCAACW_HQVoT7skQi0IBNHgQ",
+        "CAACAgUAAxkBAAIFPGf7e32N9GQtxFUBhRpnBcdq-n2VAAIUCwACrZTRViZ7bFXnR26eHgQ",
+        "CAACAgUAAxkBAAIFQGf7e4BWBoddo5yVau4uEnW05RtbAAKLCwACwurRVj5eDbteWRIYHgQ",
+        "CAACAgUAAxkBAAIFRGf7e4JmicaVg9hMejExAlZj778PAAITCAACVknZVofykXMFYuv7HgQ"
+    ]
+
+    for sticker_id in stickers:
+        try:
+            s = await client.send_sticker(chat_id=message.chat.id, sticker=sticker_id)
+            await asyncio.sleep(0.7)
+            await s.delete()
+        except:
+            pass
+
     user = message.from_user
     await digital_botz.add_user(client, message) 
     if Config.RKN_PIC:
-        await message.reply_photo(Config.RKN_PIC, caption=rkn.START_TXT.format(user.mention), reply_markup=InlineKeyboardMarkup(start_button))    
+        await client.send_photo(
+            chat_id=message.chat.id,
+            photo=Config.RKN_PIC,
+            caption=rkn.START_TXT.format(user.mention),
+            reply_markup=InlineKeyboardMarkup(start_button),
+            parse_mode="HTML"
+        )
     else:
-        await message.reply_text(text=rkn.START_TXT.format(user.mention), reply_markup=InlineKeyboardMarkup(start_button), disable_web_page_preview=True)
+        await client.send_message(
+            chat_id=message.chat.id,
+            text=rkn.START_TXT.format(user.mention),
+            reply_markup=InlineKeyboardMarkup(start_button),
+            disable_web_page_preview=True,
+            parse_mode="HTML"
+        )
 
 
 @Client.on_message(filters.private & filters.command("myplan"))
@@ -146,7 +157,7 @@ async def myplan(client, message):
 @Client.on_message(filters.private & filters.command("plans"))
 async def plans(client, message):
     if not client.premium:
-        return # premium mode disabled ✓
+
 
     user = message.from_user
     upgrade_msg = rkn.UPGRADE_PLAN.format(user.mention) if client.uploadlimit else rkn.UPGRADE_PREMIUM.format(user.mention)
